@@ -1,0 +1,151 @@
+<form #userForm="ngForm" novalidate (ngSubmit)="handleSubmit()">
+  <div class="form-group row">
+    <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+    <div class="col-sm-10">
+      <input
+        #email="ngModel"
+        [class.is-invalid]="email.invalid && email.touched"
+        type="email"
+        required
+        class="form-control"
+        id="inputEmail3"
+        placeholder="Email"
+        [(ngModel)]="userModel.email"
+        name="email"
+      />
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
+    <div class="col-sm-10">
+      <input
+        required
+        #password="ngModel"
+        [class.is-invalid]="password.invalid && password.touched"
+        type="password"
+        class="form-control"
+        id="inputPassword3"
+        placeholder="Password"
+        [(ngModel)]="userModel.password"
+        name="password"
+      />
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <label for="username" class="col-sm-2 col-form-label">Username</label>
+    <div class="col-sm-10">
+      <input
+        required
+        #username="ngModel"
+        [class.is-invalid]="username.invalid && username.touched"
+        type="text"
+        class="form-control"
+        id="username"
+        placeholder="Username"
+        [(ngModel)]="userModel.username"
+        name="username"
+      />
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <div class="col-sm-2">
+      <label for="exampleFormControlSelect1">Technology</label>
+    </div>
+    <div class="col-sm-10">
+      <select
+        required
+        #technology="ngModel"
+        [class.is-invalid]="technology.invalid && technology.touched"
+        class="form-control"
+        [(ngModel)]="userModel.technology"
+        name="technology"
+      >
+        <option value="default" selected>Select Technology</option>
+        <option *ngFor="let technology of technologies">{{
+          technology
+        }}</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <div class="col-sm-2">
+      <label for="exampleFormControlSelect1">Developer</label>
+    </div>
+    <div class="col-sm-10">
+      <div class="form-check-inline">
+        <input
+          class="form-check-input"
+          type="radio"
+          name="developer"
+          value="iot"
+          id="exampleRadios1"
+          checked
+          [(ngModel)]="userModel.developer"
+        />
+        <label class="form-check-label" for="exampleRadios1">
+          IOT
+        </label>
+      </div>
+      <div class="form-check-inline">
+        <input
+          class="form-check-input"
+          type="radio"
+          name="developer"
+          value="software"
+          id="exampleRadios2"
+          [(ngModel)]="userModel.developer"
+        />
+        <label class="form-check-label" for="exampleRadios2">
+          Software
+        </label>
+      </div>
+      <div class="form-check-inline">
+        <input
+          class="form-check-input"
+          type="radio"
+          name="developer"
+          value="hardware"
+          id="exampleRadios3"
+          [(ngModel)]="userModel.developer"
+        />
+        <label class="form-check-label" for="exampleRadios3">
+          Hardware
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <div class="col-sm-2">
+      <label for="exampleFormControlSelect1">Terms and Condition</label>
+    </div>
+    <div class="col-sm-10">
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="checkbox"
+          id="gridCheck1"
+          [(ngModel)]="userModel.checked"
+          name="condition"
+        />
+        <label class="form-check-label" for="gridCheck1">
+          Accept, Terms and Conditions
+        </label>
+      </div>
+    </div>
+  </div>
+  <div class="form-group m-auto">
+    <div class="col-sm-10 ">
+      <button type="submit" class="btn btn-primary">Sign in</button>
+    </div>
+  </div>
+</form>
+
+{{ userForm.value | json }}
+<br />
+{{ userModel | json }}
+<br />
