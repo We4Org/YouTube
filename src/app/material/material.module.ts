@@ -2,23 +2,37 @@ import { NgModule } from "@angular/core";
 
 import {
   MatButtonToggleModule,
+  MatFormFieldModule,
+  MatGridListModule,
+  MatCheckboxModule,
   MatToolbarModule,
   MatSidenavModule,
   MatButtonModule,
   MatBadgeModule,
+  MatInputModule,
   MatIconModule,
-  MatListModule
+  MatListModule,
+  MatMenuModule,
+  MatTabsModule,
+  MatCardModule
 } from "@angular/material";
 
 const MaterialComponents = [
   MatButtonToggleModule,
   MatButtonToggleModule,
+  MatFormFieldModule,
+  MatCheckboxModule,
+  MatGridListModule,
   MatSidenavModule,
   MatToolbarModule,
   MatButtonModule,
   MatBadgeModule,
   MatListModule,
-  MatIconModule
+  MatIconModule,
+  MatMenuModule,
+  MatTabsModule,
+  MatCardModule,
+  MatInputModule
 ];
 
 @NgModule({

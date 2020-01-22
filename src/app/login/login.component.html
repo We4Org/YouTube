@@ -1,151 +1,126 @@
-<form #userForm="ngForm" novalidate (ngSubmit)="handleSubmit()">
-  <div class="form-group row">
-    <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
-    <div class="col-sm-10">
-      <input
-        #email="ngModel"
-        [class.is-invalid]="email.invalid && email.touched"
-        type="email"
-        required
-        class="form-control"
-        id="inputEmail3"
-        placeholder="Email"
-        [(ngModel)]="userModel.email"
-        name="email"
-      />
+<div class="login-page">
+  <mat-card class="mat-elevation-z12">
+    <div style="display:flex;justify-content: space-around;">
+      <button mat-icon-button class="icon-btn">
+        <mat-icon>lock</mat-icon>
+      </button>
     </div>
-  </div>
-
-  <div class="form-group row">
-    <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
-    <div class="col-sm-10">
-      <input
-        required
-        #password="ngModel"
-        [class.is-invalid]="password.invalid && password.touched"
-        type="password"
-        class="form-control"
-        id="inputPassword3"
-        placeholder="Password"
-        [(ngModel)]="userModel.password"
-        name="password"
-      />
-    </div>
-  </div>
-
-  <div class="form-group row">
-    <label for="username" class="col-sm-2 col-form-label">Username</label>
-    <div class="col-sm-10">
-      <input
-        required
-        #username="ngModel"
-        [class.is-invalid]="username.invalid && username.touched"
-        type="text"
-        class="form-control"
-        id="username"
-        placeholder="Username"
-        [(ngModel)]="userModel.username"
-        name="username"
-      />
-    </div>
-  </div>
-
-  <div class="form-group row">
-    <div class="col-sm-2">
-      <label for="exampleFormControlSelect1">Technology</label>
-    </div>
-    <div class="col-sm-10">
-      <select
-        required
-        #technology="ngModel"
-        [class.is-invalid]="technology.invalid && technology.touched"
-        class="form-control"
-        [(ngModel)]="userModel.technology"
-        name="technology"
-      >
-        <option value="default" selected>Select Technology</option>
-        <option *ngFor="let technology of technologies">{{
-          technology
-        }}</option>
-      </select>
-    </div>
-  </div>
-
-  <div class="form-group row">
-    <div class="col-sm-2">
-      <label for="exampleFormControlSelect1">Developer</label>
-    </div>
-    <div class="col-sm-10">
-      <div class="form-check-inline">
-        <input
-          class="form-check-input"
-          type="radio"
-          name="developer"
-          value="iot"
-          id="exampleRadios1"
-          checked
-          [(ngModel)]="userModel.developer"
-        />
-        <label class="form-check-label" for="exampleRadios1">
-          IOT
-        </label>
-      </div>
-      <div class="form-check-inline">
-        <input
-          class="form-check-input"
-          type="radio"
-          name="developer"
-          value="software"
-          id="exampleRadios2"
-          [(ngModel)]="userModel.developer"
-        />
-        <label class="form-check-label" for="exampleRadios2">
-          Software
-        </label>
-      </div>
-      <div class="form-check-inline">
-        <input
-          class="form-check-input"
-          type="radio"
-          name="developer"
-          value="hardware"
-          id="exampleRadios3"
-          [(ngModel)]="userModel.developer"
-        />
-        <label class="form-check-label" for="exampleRadios3">
-          Hardware
-        </label>
-      </div>
-    </div>
-  </div>
-
-  <div class="form-group row">
-    <div class="col-sm-2">
-      <label for="exampleFormControlSelect1">Terms and Condition</label>
-    </div>
-    <div class="col-sm-10">
-      <div class="form-check">
-        <input
-          class="form-check-input"
-          type="checkbox"
-          id="gridCheck1"
-          [(ngModel)]="userModel.checked"
-          name="condition"
-        />
-        <label class="form-check-label" for="gridCheck1">
-          Accept, Terms and Conditions
-        </label>
-      </div>
-    </div>
-  </div>
-  <div class="form-group m-auto">
-    <div class="col-sm-10 ">
-      <button type="submit" class="btn btn-primary">Sign in</button>
-    </div>
-  </div>
-</form>
-
-{{ userForm.value | json }}
-<br />
-{{ userModel | json }}
-<br />
+    <mat-card-title style="text-align:center;">SignIn / SignUp</mat-card-title>
+    <mat-tab-group mat-stretch-tabs class="example-stretched-tabs">
+      <mat-tab label="Sign In">
+        <mat-card-content>
+          <form action="">
+            <mat-form-field>
+              <input
+                matInput
+                placeholder="Email"
+                required
+                name="email"
+                ngModel
+                #email="ngModel"
+              />
+              <mat-error *ngIf="email.invalid">Email is required</mat-error>
+              <mat-icon matSuffix>email</mat-icon>
+            </mat-form-field>
+            <mat-form-field>
+              <input
+                matInput
+                placeholder="Password"
+                type="password"
+                required
+                minlength="6"
+                name="password"
+                ngModel
+                #password="ngModel"
+              />
+              <mat-error *ngIf="password.errors && password.errors.required">
+                Password is required
+              </mat-error>
+              <mat-error *ngIf="password.errors && password.errors.minlength">
+                Password must be of length 6
+              </mat-error>
+              <mat-icon matSuffix>lock</mat-icon>
+            </mat-form-field>
+            <mat-checkbox>Remember Me!</mat-checkbox>
+            <button mat-raised-button color="primary" class="login-button">
+              Sign In
+            </button>
+          </form>
+        </mat-card-content>
+      </mat-tab>
+      <mat-tab label="Sign Up">
+        <mat-card-content>
+          <form>
+            <mat-form-field>
+              <input
+                matInput
+                placeholder="User Name"
+                required
+                name="username"
+                ngModel
+                #username="ngModel"
+              />
+              <mat-icon matSuffix>perm_identity</mat-icon>
+              <mat-error *ngIf="username.invalid">
+                Username is required
+              </mat-error>
+            </mat-form-field>
+            <mat-form-field>
+              <input
+                matInput
+                placeholder="Email"
+                required
+                name="email"
+                ngModel
+                #email="ngModel"
+              />
+              <mat-error *ngIf="email.invalid">Email is required</mat-error>
+              <mat-icon matSuffix>email</mat-icon>
+            </mat-form-field>
+            <mat-form-field>
+              <input
+                matInput
+                placeholder="Password"
+                type="password"
+                required
+                minlength="6"
+                name="password"
+                ngModel
+                #password="ngModel"
+              />
+              <mat-error *ngIf="password.errors && password.errors.required">
+                Password is required
+              </mat-error>
+              <mat-error *ngIf="password.errors && password.errors.minlength">
+                Password must be of length 6
+              </mat-error>
+              <mat-icon matSuffix>lock</mat-icon>
+            </mat-form-field>
+            <mat-form-field>
+              <input
+                matInput
+                placeholder="Confirm Password"
+                type="password"
+                required
+                minlength="6"
+                name="repassword"
+                ngModel
+                #repassword="ngModel"
+              />
+              <mat-error
+                *ngIf="repassword.errors && repassword.errors.required"
+              >
+                Re-Enter Password is required
+              </mat-error>
+              <mat-icon matSuffix>lock</mat-icon>
+            </mat-form-field>
+            <mat-checkbox>I agree to all the terms and condition</mat-checkbox>
+            <button mat-raised-button color="primary" class="login-button">
+              Sign Up
+            </button>
+          </form>
+        </mat-card-content>
+      </mat-tab>
+    </mat-tab-group>
+  </mat-card>
+</div>

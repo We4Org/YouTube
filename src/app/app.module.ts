@@ -8,9 +8,11 @@ import { NgModule } from "@angular/core";
 import { AppRoutingModule, RoutingComponents } from "./app-routing.module";
 import { MaterialModule } from "./material/material.module";
 import { AppComponent } from "./app.component";
-import { ApiService } from "./api.service";
+import { ApiService } from "./services/api.service";
 import { AuthGuard } from "./auth.guard";
-import { TokenIntercepterService } from "./token-intercepter.service";
+import { TokenIntercepterService } from "./services/token-intercepter.service";
+import { SideNavService } from "./services/side-nav.service";
+import { ScreenBreakpointService } from "./services/breakpoint.service";
 
 @NgModule({
   declarations: [AppComponent, RoutingComponents],
@@ -26,11 +28,14 @@ import { TokenIntercepterService } from "./token-intercepter.service";
   ],
   bootstrap: [AppComponent],
   providers: [
+    TokenIntercepterService,
+    ScreenBreakpointService,
+    SideNavService,
     ApiService,
     AuthGuard,
     {
-      provide: HTTP_INTERCEPTORS,
       useClass: TokenIntercepterService,
+      provide: HTTP_INTERCEPTORS,
       multi: true
     }
   ]
