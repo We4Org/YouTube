@@ -11,6 +11,10 @@ export class SideNavService {
     return this._sideNavOpen;
   }
 
+  closeNav() {
+    this._sideNavOpen = false;
+  }
+
   toggle() {
     this._sideNavOpen = !this._sideNavOpen;
   }

@@ -1,20 +1,12 @@
-<div class="container" [class.example-is-mobile]="matches">
+<div class="nav-container">
   <mat-toolbar color="primary" class="example-toolbar">
-    <button
-      mat-icon-button
-      #btn
-      (click)="matches ? sidenav.toggle() : navService.toggle()"
-    >
+    <button mat-icon-button (click)="navService.toggle()">
       <mat-icon>menu</mat-icon>
     </button>
-    <h1 class="example-app-name">YouTube</h1>
+    <h1>YouTube</h1>
     <div style="flex-grow: 1;"></div>
     <div>
-      <button
-        mat-icon-button
-        [matMenuTriggerFor]="menu"
-        aria-label="Example icon-button with a menu"
-      >
+      <button mat-icon-button [matMenuTriggerFor]="menu">
         <mat-icon>more_vert</mat-icon>
       </button>
       <mat-menu #menu="matMenu">
@@ -36,29 +28,54 @@
   <mat-sidenav-container class="mat-sidenav-container" autosize>
     <mat-sidenav
       [fixedInViewport]="false"
-      [mode]="matches ? 'over' : 'side'"
+      [mode]="BP.isXS || BP.isSM ? 'over' : 'side'"
       #sidenav
-      [opened]="!matches && true"
-      [@onSideNavChange]="
-        navService.isOpen && matches
-          ? 'open'
-          : navService.isOpen
-          ? 'close'
-          : 'open'
-      "
+      [opened]="BP.isXS || BP.isSM ? navService.isOpen : true"
+      [@onSideNavChange]="navService.isOpen"
+      (closed)="navService.closeNav()"
     >
       <app-side-nav></app-side-nav>
     </mat-sidenav>
+
+
+
+
+
+
+
+    <!-- <mat-sidenav
+    [mode]=" 'over'"
+    [opened]="navService.isOpen"
+  >
+    <app-side-nav></app-side-nav>
+  </mat-sidenav> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <mat-sidenav-content
-      [@onMainContentChange]="
-        navService.isOpen && matches
-          ? 'null'
-          : navService.isOpen && !matches
-          ? 'open'
-          : 'close'
-      "
+      [@onMainContentChange]="BP.isXS || BP.isSM? 'null' : navService.isOpen"
     >
-      <div style="width: 95%; margin: auto;margin-top: 10px;">
+      <div style="padding: 15px;">
         <router-outlet></router-outlet>
       </div>
     </mat-sidenav-content>

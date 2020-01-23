@@ -2,6 +2,7 @@ import { NgModule } from "@angular/core";
 
 import {
   MatButtonToggleModule,
+  MatBottomSheetModule,
   MatFormFieldModule,
   MatGridListModule,
   MatCheckboxModule,
@@ -14,12 +15,13 @@ import {
   MatListModule,
   MatMenuModule,
   MatTabsModule,
-  MatCardModule
+  MatCardModule,
 } from "@angular/material";
 
 const MaterialComponents = [
   MatButtonToggleModule,
   MatButtonToggleModule,
+  MatBottomSheetModule,
   MatFormFieldModule,
   MatCheckboxModule,
   MatGridListModule,

@@ -8,32 +8,32 @@ import {
 
 export const onSideNavChange = trigger("onSideNavChange", [
   state(
-    "close",
+    'false',
     style({
       width: "70px"
     })
   ),
   state(
-    "open",
+    "true",
     style({
-      width: "200px"
+      width: "170px"
     })
   ),
-  transition("close <=> open", animate("300ms"))
+  transition("true <=> false", animate("300ms"))
 ]);
 
 export const onMainContentChange = trigger("onMainContentChange", [
   state(
-    "close",
+    "false",
     style({
       "margin-left": "70px"
     })
   ),
   state(
-    "open",
+    "true",
     style({
-      "margin-left": "200px"
+      "margin-left": "170px"
     })
   ),
-  transition("close <=> open", animate("300ms"))
+  transition("true <=> false", animate("300ms"))
 ]);

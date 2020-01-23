@@ -1,4 +1,4 @@
-.container {
+.nav-container {
   display: flex;
   flex-direction: column;
   position: absolute;
@@ -24,33 +24,4 @@ h1.example-app-name {
 
 .example-is-mobile .example-sidenav-container {
   flex: 1 0 auto;
-}
-
-.side-nav-open {
-  animation-name: open;
-  animation-duration: 400ms;
-  width: 200px;
-}
-.side-nav-close {
-  animation-name: close;
-  animation-duration: 400ms;
-  width: 70px;
-}
-
-@keyframes open {
-  from {
-    width: 70px;
-  }
-  to {
-    width: 200px;
-  }
-}
-
-@keyframes close {
-  from {
-    width: 200px;
-  }
-  to {
-    width: 70px;
-  }
 }

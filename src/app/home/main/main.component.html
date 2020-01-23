@@ -1,1 +1,29 @@
-<p style="margin-top: 50px;">Hello world</p>
+<div class="row no-gutters">
+  <div
+    class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-3 justify-content-center d-flex"
+    style="margin-bottom: 10px;"
+    *ngFor="let tile of rows"
+  >
+    <mat-card class="card">
+      <mat-card-header>
+        <img
+          mat-card-avatar
+          class="avatar"
+          src="https://yt3.ggpht.com/a/AGF-l7_fltNifNd4c9EQU-eBrh9ZbZwLxkj39Zjuug=s288-c-k-c0xffffffff-no-rj-mo"
+        />
+        <mat-card-title>Technical Bunch</mat-card-title>
+        <div class="mr-auto"></div>
+        <app-menu></app-menu>
+      </mat-card-header>
+      <img
+        mat-card-image
+        src="https://i.ytimg.com/vi/qnfEBjnX8GM/maxresdefault.jpg"
+        alt="Photo of a Shiba Inu"
+      />
+      <mat-card-content>
+        <p>{{ text | slice: 0:95 }} {{ text.length >= 95 && "..." }}</p>
+        <p class="text-left">260k Views&nbsp;<strong> 2 years ago</strong></p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
