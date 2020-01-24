@@ -6,8 +6,8 @@
 .card {
   padding: 0px;
   margin: 0px;
-  padding-right: 3px;
-  padding-left: 3px;
+  padding-right: 6px;
+  padding-left: 6px;
 }
 
 .card-image {
@@ -31,12 +31,19 @@
 
 .text {
   margin-top: -2px;
-  margin-left: 10px;
+  margin-left: 12px;
   letter-spacing: 0px;
   font-weight: 500;
   font-size: 14px;
   line-height: 20px;
   font-family: roboto-black;
+}
+.recommended {
+  letter-spacing: 0px;
+  line-height: 0px;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24px;
 }
 
 .title {
@@ -52,4 +59,39 @@
   font-weight: 400;
   letter-spacing: 0px;
   font-size: 15px;
+}
+
+.check {
+  background-color: rgba(167, 145, 145, 0.671);
+  border-radius: 50%;
+  width: 13px;
+  height: 13px;
+  color: rgb(255, 255, 255);
+  font-size: 12px;
+  font-weight: 600;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+  cursor: default;
+}
+
+.check::selection {
+  background: none;
+  color: none;
+}
+
+.time {
+  position: absolute;
+  bottom: 0px;
+  right: 12px;
+  background-color: black;
+  font-size: 10px;
+  font-weight: 500;
+  padding: 0px 3px;
+  letter-spacing: 0px;
+  border-radius: 2px;
+}
+
+.img-container {
+  position: relative;
+  text-align: center;
+  color: white;
 }
