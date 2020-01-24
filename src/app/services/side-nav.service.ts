@@ -4,7 +4,7 @@ import { Injectable } from "@angular/core";
   providedIn: "root"
 })
 export class SideNavService {
-  private _sideNavOpen = false;
+  private _sideNavOpen = true;
   constructor() {}
 
   get isOpen(): boolean {

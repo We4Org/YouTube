@@ -9,7 +9,6 @@ import { NgModule } from "@angular/core";
 import { AppRoutingModule, RoutingComponents } from "./app-routing.module";
 import { TokenIntercepterService } from "./services/token-intercepter.service";
 import { ScreenBreakpointService } from "./services/breakpoint.service";
-import { MenuComponent } from './home/main/menu/menu.component';
 import { SideNavService } from "./services/side-nav.service";
 import { MaterialModule } from "./material/material.module";
 import { ApiService } from "./services/api.service";
@@ -17,7 +16,7 @@ import { AppComponent } from "./app.component";
 import { AuthGuard } from "./auth.guard";
 
 @NgModule({
-  declarations: [AppComponent, RoutingComponents, MenuComponent],
+  declarations: [AppComponent, RoutingComponents],
   imports: [
     BrowserAnimationsModule,
     ReactiveFormsModule,

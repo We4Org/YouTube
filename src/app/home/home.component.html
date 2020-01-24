@@ -1,30 +1,5 @@
 <div class="nav-container">
-  <mat-toolbar color="primary" class="example-toolbar">
-    <button mat-icon-button (click)="navService.toggle()">
-      <mat-icon>menu</mat-icon>
-    </button>
-    <h1>YouTube</h1>
-    <div style="flex-grow: 1;"></div>
-    <div>
-      <button mat-icon-button [matMenuTriggerFor]="menu">
-        <mat-icon>more_vert</mat-icon>
-      </button>
-      <mat-menu #menu="matMenu">
-        <button mat-menu-item>
-          <mat-icon>account_circle</mat-icon>
-          <span>Profile</span>
-        </button>
-        <button mat-menu-item>
-          <mat-icon>settings</mat-icon>
-          <span>Setting</span>
-        </button>
-        <button mat-menu-item>
-          <mat-icon>power_settings_new</mat-icon>
-          <span>Logout</span>
-        </button>
-      </mat-menu>
-    </div>
-  </mat-toolbar>
+  <app-app-bar></app-app-bar>
   <mat-sidenav-container class="mat-sidenav-container" autosize>
     <mat-sidenav
       [fixedInViewport]="false"
@@ -37,12 +12,6 @@
       <app-side-nav></app-side-nav>
     </mat-sidenav>
 
-
-
-
-
-
-
     <!-- <mat-sidenav
     [mode]=" 'over'"
     [opened]="navService.isOpen"
@@ -50,32 +19,10 @@
     <app-side-nav></app-side-nav>
   </mat-sidenav> -->
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <mat-sidenav-content
-      [@onMainContentChange]="BP.isXS || BP.isSM? 'null' : navService.isOpen"
+      [@onMainContentChange]="BP.isXS || BP.isSM ? 'null' : navService.isOpen"
     >
-      <div style="padding: 15px;">
+      <div style="width: 95%; margin: auto;">
         <router-outlet></router-outlet>
       </div>
     </mat-sidenav-content>

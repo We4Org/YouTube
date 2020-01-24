@@ -16,7 +16,7 @@ export const onSideNavChange = trigger("onSideNavChange", [
   state(
     "true",
     style({
-      width: "170px"
+      width: "230px"
     })
   ),
   transition("true <=> false", animate("300ms"))
@@ -32,7 +32,7 @@ export const onMainContentChange = trigger("onMainContentChange", [
   state(
     "true",
     style({
-      "margin-left": "170px"
+      "margin-left": "230px"
     })
   ),
   transition("true <=> false", animate("300ms"))

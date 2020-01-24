@@ -2,12 +2,14 @@ import { Routes, RouterModule } from "@angular/router";
 import { NgModule } from "@angular/core";
 
 import { LoginChildComponent } from "./login-child/login-child.component";
+import { TrendingComponent } from "./home/trending/trending.component";
+import { SideNavComponent } from "./home/side-nav/side-nav.component";
+import { AppBarComponent } from './home/app-bar/app-bar.component';
+import { MenuComponent } from './home/main/menu/menu.component';
+import { MainComponent } from "./home/main/main.component";
 import { LoginComponent } from "./login/login.component";
 import { HomeComponent } from "./home/home.component";
 import { AuthGuard } from "./auth.guard";
-import { MainComponent } from "./home/main/main.component";
-import { TrendingComponent } from "./home/trending/trending.component";
-import { SideNavComponent } from "./home/side-nav/side-nav.component";
 
 const routes: Routes = [
   {
@@ -44,7 +46,9 @@ export const RoutingComponents = [
   LoginChildComponent,
   TrendingComponent,
   SideNavComponent,
+  AppBarComponent,
   LoginComponent,
   HomeComponent,
-  MainComponent
+  MainComponent,
+  MenuComponent
 ];

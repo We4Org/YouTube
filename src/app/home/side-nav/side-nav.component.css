@@ -1,0 +1,9 @@
+mat-icon::selection {
+  color: none;
+  background: none;
+}
+
+p::selection {
+  color: none;
+  background: none;
+}

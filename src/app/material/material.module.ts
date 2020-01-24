@@ -2,6 +2,8 @@ import { NgModule } from "@angular/core";
 
 import {
   MatButtonToggleModule,
+  MatAutocompleteModule,
+  MatSlideToggleModule,
   MatBottomSheetModule,
   MatFormFieldModule,
   MatGridListModule,
@@ -20,8 +22,10 @@ import {
 
 const MaterialComponents = [
   MatButtonToggleModule,
+  MatAutocompleteModule,
   MatButtonToggleModule,
   MatBottomSheetModule,
+  MatSlideToggleModule,
   MatFormFieldModule,
   MatCheckboxModule,
   MatGridListModule,
