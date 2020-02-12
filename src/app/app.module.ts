@@ -6,27 +6,47 @@ import { FlexLayoutModule } from "@angular/flex-layout";
 import { LayoutModule } from "@angular/cdk/layout";
 import { NgModule } from "@angular/core";
 
-import { AppRoutingModule, RoutingComponents } from "./app-routing.module";
+import { VgCoreModule } from "videogular2/compiled/core";
+import { VgControlsModule } from "videogular2/compiled/controls";
+import { VgOverlayPlayModule } from "videogular2/compiled/overlay-play";
+import { VgBufferingModule } from "videogular2/compiled/buffering";
+
+import { WatchVideoComponent } from "./home/watch-video/watch-video.component";
 import { TokenIntercepterService } from "./services/token-intercepter.service";
+import { AppRoutingModule, RoutingComponents } from "./app-routing.module";
 import { ScreenBreakpointService } from "./services/breakpoint.service";
 import { SideNavService } from "./services/side-nav.service";
 import { MaterialModule } from "./material/material.module";
 import { ApiService } from "./services/api.service";
 import { AppComponent } from "./app.component";
 import { AuthGuard } from "./auth.guard";
+import { ExpandableTableComponent } from "./Table/expandable-table/expandable-table.component";
+import { CarouselComponent } from "./Components/carousel/carousel.component";
+import { MatCarouselModule } from "@ngmodule/material-carousel";
 
 @NgModule({
-  declarations: [AppComponent, RoutingComponents],
+  declarations: [
+    AppComponent,
+    RoutingComponents,
+    WatchVideoComponent,
+    ExpandableTableComponent,
+    CarouselComponent
+  ],
   imports: [
     BrowserAnimationsModule,
     ReactiveFormsModule,
     AppRoutingModule,
     HttpClientModule,
-    FlexLayoutModule ,
+    FlexLayoutModule,
     MaterialModule,
     BrowserModule,
     LayoutModule,
-    FormsModule
+    FormsModule,
+    VgCoreModule,
+    VgControlsModule,
+    VgOverlayPlayModule,
+    VgBufferingModule,
+    MatCarouselModule.forRoot()
   ],
   bootstrap: [AppComponent],
   providers: [

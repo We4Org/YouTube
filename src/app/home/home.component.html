@@ -3,26 +3,19 @@
   <mat-sidenav-container class="mat-sidenav-container" autosize>
     <mat-sidenav
       [fixedInViewport]="false"
-      [mode]="BP.isXS || BP.isSM ? 'over' : 'side'"
+      [mode]="BP.isXS || BP.isSM || navService.isWatch ? 'over' : 'side'"
       #sidenav
-      [opened]="BP.isXS || BP.isSM ? navService.isOpen : true"
+      [opened]="BP.isXS || BP.isSM || navService.isWatch ? navService.isOpen : true"
       [@onSideNavChange]="navService.isOpen"
       (closed)="navService.closeNav()"
     >
       <app-side-nav></app-side-nav>
     </mat-sidenav>
 
-    <!-- <mat-sidenav
-    [mode]=" 'over'"
-    [opened]="navService.isOpen"
-  >
-    <app-side-nav></app-side-nav>
-  </mat-sidenav> -->
-
     <mat-sidenav-content
-      [@onMainContentChange]="BP.isXS || BP.isSM ? 'null' : navService.isOpen"
+      [@onMainContentChange]="BP.isXS || BP.isSM || navService.isWatch ? 'null' : navService.isOpen"
     >
-      <div style="width: 95%; margin: auto;">
+      <div class="content">
         <router-outlet></router-outlet>
       </div>
     </mat-sidenav-content>

@@ -1,0 +1,39 @@
+.video {
+  max-width: 100%;
+  max-height: 100%;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+}
+
+.side {
+  font-weight: 500;
+  font-size: 14px;
+}
+
+p {
+  padding: 0px;
+  margin: 0px;
+}
+
+.channel {
+  font-size: 13px;
+  font-weight: 400;
+  color: #606060;
+}
+
+.volume-slider {
+  display: none;
+}
+
+.volume:hover ~ .volume-slider,
+.volume-slider:hover {
+  display: flex;
+}
+
+.progress-bar,
+.buffer-bar {
+  height: 3px;
+}
+
+

@@ -15,7 +15,7 @@ export class MainComponent implements OnInit {
         thumbnail: "https://i.ytimg.com/vi/QRIZkK4j4cE/maxresdefault.jpg",
         profile:
           "https://yt3.ggpht.com/a/AGF-l7_fltNifNd4c9EQU-eBrh9ZbZwLxkj39Zjuug=s288-c-k-c0xffffffff-no-rj-mo",
-        text: "Angular 8 Tutorials for Beginners",
+        text: "Angular 8 Tutorials for Beginners tune kahe breakup kar liya",
         channel: "Traversy Media",
         views: "2M",
         old: "1 year",

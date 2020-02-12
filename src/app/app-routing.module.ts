@@ -4,12 +4,15 @@ import { NgModule } from "@angular/core";
 import { LoginChildComponent } from "./login-child/login-child.component";
 import { TrendingComponent } from "./home/trending/trending.component";
 import { SideNavComponent } from "./home/side-nav/side-nav.component";
-import { AppBarComponent } from './home/app-bar/app-bar.component';
-import { MenuComponent } from './home/main/menu/menu.component';
+import { AppBarComponent } from "./home/app-bar/app-bar.component";
+import { MenuComponent } from "./home/main/menu/menu.component";
 import { MainComponent } from "./home/main/main.component";
 import { LoginComponent } from "./login/login.component";
 import { HomeComponent } from "./home/home.component";
 import { AuthGuard } from "./auth.guard";
+import { WatchVideoComponent } from "./home/watch-video/watch-video.component";
+import { ExpandableTableComponent } from "./Table/expandable-table/expandable-table.component";
+import { CarouselComponent } from "./Components/carousel/carousel.component";
 
 const routes: Routes = [
   {
@@ -24,6 +27,10 @@ const routes: Routes = [
       {
         path: "trending",
         component: TrendingComponent
+      },
+      {
+        path: "watch",
+        component: WatchVideoComponent
       }
     ]
   },
@@ -34,6 +41,14 @@ const routes: Routes = [
   {
     path: "admin",
     component: LoginChildComponent
+  },
+  {
+    path: "table",
+    component: ExpandableTableComponent
+  },
+  {
+    path: "carousel",
+    component: CarouselComponent
   }
 ];
 
@@ -44,6 +59,7 @@ const routes: Routes = [
 export class AppRoutingModule {}
 export const RoutingComponents = [
   LoginChildComponent,
+  WatchVideoComponent,
   TrendingComponent,
   SideNavComponent,
   AppBarComponent,

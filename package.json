@@ -1,5 +1,5 @@
 {
-  "name": "angular-test",
+  "name": "youtube-clone",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -22,10 +22,15 @@
     "@angular/platform-browser": "~8.2.14",
     "@angular/platform-browser-dynamic": "~8.2.14",
     "@angular/router": "~8.2.14",
+    "@ngmodule/material-carousel": "^0.6.0",
+    "@ngrx/store": "^8.6.0",
     "hammerjs": "^2.0.8",
     "lodash": "^4.17.15",
+    "ng-simple-slideshow": "^1.2.9",
+    "ngx-owl-carousel-o": "^2.0.3",
     "rxjs": "~6.4.0",
     "tslib": "^1.10.0",
+    "videogular2": "^7.0.1",
     "zone.js": "~0.9.1"
   },
   "devDependencies": {
@@ -33,6 +38,7 @@
     "@angular/cli": "~8.3.23",
     "@angular/compiler-cli": "~8.2.14",
     "@angular/language-service": "~8.2.14",
+    "@types/core-js": "^2.5.2",
     "@types/jasmine": "~3.3.8",
     "@types/jasminewd2": "~2.0.3",
     "@types/lodash": "^4.14.149",

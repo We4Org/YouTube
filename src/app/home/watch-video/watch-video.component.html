@@ -1,0 +1,184 @@
+<div class="container-fluid">
+  <div class="row mt-4">
+    <div class="col-lg-8 col-md-7 col-sm-12">
+      <div class="video">
+        <vg-player (onPlayerReady)="onPlayerReady($event)">
+          <vg-overlay-play></vg-overlay-play>
+          <vg-buffering></vg-buffering>
+
+          <vg-scrub-bar
+            [vgSlider]="true"
+            style="background-color: rgba(245, 245, 245, 0.034); height: 3px;"
+          >
+            <vg-scrub-bar-current-time
+              [vgSlider]="true"
+              class="progress-bar"
+              
+            ></vg-scrub-bar-current-time>
+            <vg-scrub-bar-buffering-time
+              class="buffer-bar"
+            ></vg-scrub-bar-buffering-time>
+          </vg-scrub-bar>
+
+          <vg-controls
+            [vgAutohide]="false"
+            [vgAutohideTime]="1"
+            style="background-color: transparent; font-size: 13px; font-family: roboto; font-weight: 400;"
+          >
+            <vg-play-pause></vg-play-pause>
+            <vg-mute class="volume"></vg-mute>
+            <vg-volume class="volume-slider"></vg-volume>
+            <vg-time-display
+              vgProperty="current"
+              vgFormat="mm:ss"
+            ></vg-time-display>
+            <span style="color: white; margin-top: 15px;">/</span>
+            <vg-time-display
+              vgProperty="total"
+              vgFormat="mm:ss"
+            ></vg-time-display>
+
+            <vg-scrub-bar style="pointer-events: none;"></vg-scrub-bar>
+
+            <vg-playback-button></vg-playback-button>
+            <vg-track-selector></vg-track-selector>
+            <!-- <vg-quality-selector> </vg-quality-selector> -->
+
+            <vg-fullscreen></vg-fullscreen>
+          </vg-controls>
+
+          <video
+            [vgMedia]="media"
+            #media
+            id="singleVideo"
+            preload="auto"
+            crossorigin
+            autoplay
+          >
+            <source
+              src="http://static.videogular.com/assets/videos/videogular.mp4"
+              type="video/mp4"
+            />
+            <source
+              src="http://static.videogular.com/assets/videos/videogular.ogg"
+              type="video/ogg"
+            />
+            <source
+              src="http://static.videogular.com/assets/videos/videogular.webm"
+              type="video/webm"
+            />
+
+            <track
+              kind="subtitles"
+              label="English"
+              src="http://static.videogular.com/assets/subs/pale-blue-dot.vtt"
+              srclang="en"
+              default
+            />
+            <track
+              kind="subtitles"
+              label="Español"
+              src="http://static.videogular.com/assets/subs/pale-blue-dot-es.vtt"
+              srclang="es"
+            />
+          </video>
+        </vg-player>
+      </div>
+    </div>
+    <div class="col-lg-4 col-md-5 col-sm-12 side">
+      <div class="d-flex">
+        <p class="mt-1">Up Next</p>
+        <div style="flex-grow: 1;"></div>
+        <p class="mt-1 mr-1">AUTOPLAY</p>
+        <mat-slide-toggle color="primary"> </mat-slide-toggle>
+      </div>
+      <div class="d-flex mt-3">
+        <img
+          src="https://i.ytimg.com/vi/Sp3dFF-Bts0/maxresdefault.jpg"
+          alt=""
+          width="180"
+        />
+        <div class="side-content pl-2">
+          <p>Tailwind CSS Crash Course</p>
+          <p class="channel">Traversy Media</p>
+          <p class="channel">65K views</p>
+        </div>
+      </div>
+      <mat-divider class="mt-3"></mat-divider>
+      <div>
+        <div class="d-flex mt-3">
+          <img
+            src="https://i.ytimg.com/vi/Sp3dFF-Bts0/maxresdefault.jpg"
+            alt=""
+            width="180"
+          />
+          <div class="side-content pl-2">
+            <p>Tailwind CSS Crash Course</p>
+            <p class="channel">Traversy Media</p>
+            <p class="channel">65K views</p>
+          </div>
+        </div>
+        <div class="d-flex mt-3">
+          <img
+            src="https://i.ytimg.com/vi/Sp3dFF-Bts0/maxresdefault.jpg"
+            alt=""
+            width="180"
+          />
+          <div class="side-content pl-2">
+            <p>Tailwind CSS Crash Course</p>
+            <p class="channel">Traversy Media</p>
+            <p class="channel">65K views</p>
+          </div>
+        </div>
+        <div class="d-flex mt-3">
+          <img
+            src="https://i.ytimg.com/vi/Sp3dFF-Bts0/maxresdefault.jpg"
+            alt=""
+            width="180"
+          />
+          <div class="side-content pl-2">
+            <p>Tailwind CSS Crash Course</p>
+            <p class="channel">Traversy Media</p>
+            <p class="channel">65K views</p>
+          </div>
+        </div>
+        <div class="d-flex mt-3">
+          <img
+            src="https://i.ytimg.com/vi/Sp3dFF-Bts0/maxresdefault.jpg"
+            alt=""
+            width="180"
+          />
+          <div class="side-content pl-2">
+            <p>Tailwind CSS Crash Course</p>
+            <p class="channel">Traversy Media</p>
+            <p class="channel">65K views</p>
+          </div>
+        </div>
+        <div class="d-flex mt-3">
+          <img
+            src="https://i.ytimg.com/vi/Sp3dFF-Bts0/maxresdefault.jpg"
+            alt=""
+            width="180"
+          />
+          <div class="side-content pl-2">
+            <p>Tailwind CSS Crash Course</p>
+            <p class="channel">Traversy Media</p>
+            <p class="channel">65K views</p>
+          </div>
+        </div>
+        <div class="d-flex mt-3">
+          <img
+            src="https://i.ytimg.com/vi/Sp3dFF-Bts0/maxresdefault.jpg"
+            alt=""
+            width="180"
+          />
+          <div class="side-content pl-2">
+            <p>Tailwind CSS Crash Course</p>
+            <p class="channel">Traversy Media</p>
+            <p class="channel">65K views</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

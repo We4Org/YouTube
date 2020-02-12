@@ -8,20 +8,6 @@
   right: 0;
   height: 100%;
 }
-
-.example-is-mobile .example-toolbar {
-  position: fixed;
-  z-index: 2;
-}
-
-h1.example-app-name {
-  margin-left: 8px;
-}
-
 .mat-sidenav-container {
-  flex: 1;
-}
-
-.example-is-mobile .example-sidenav-container {
-  flex: 1 0 auto;
+  height: 100%;
 }

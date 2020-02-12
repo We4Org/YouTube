@@ -16,6 +16,10 @@
           alt="YouTube thumbnail"
         />
         <p class="time">{{ row.time }}</p>
+        <mat-icon class="watch-later">watch_later</mat-icon>
+        <div class="later-div">WATCH LATER</div>
+        <mat-icon class="add-playlist">playlist_play</mat-icon>
+        <div class="playlist-queue">ADD TO QUEUE</div>
       </div>
       <div class="card-content">
         <div class="d-flex mt-2">
@@ -23,6 +27,8 @@
           <p class="text">
             {{ row.text | slice: 0:70 }}
           </p>
+          <div style="flex-grow: 1;"></div>
+          <mat-icon class="more-icon">more_vert</mat-icon>
         </div>
         <p class="title">
           {{ row.channel }}

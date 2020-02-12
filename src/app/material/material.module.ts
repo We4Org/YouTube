@@ -13,11 +13,12 @@ import {
   MatButtonModule,
   MatBadgeModule,
   MatInputModule,
+  MatTableModule,
   MatIconModule,
   MatListModule,
   MatMenuModule,
   MatTabsModule,
-  MatCardModule,
+  MatCardModule
 } from "@angular/material";
 
 const MaterialComponents = [
@@ -33,12 +34,13 @@ const MaterialComponents = [
   MatToolbarModule,
   MatButtonModule,
   MatBadgeModule,
-  MatListModule,
+  MatInputModule,
+  MatTableModule,
   MatIconModule,
   MatMenuModule,
-  MatTabsModule,
+  MatListModule,
   MatCardModule,
-  MatInputModule
+  MatTabsModule
 ];
 
 @NgModule({
