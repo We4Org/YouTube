@@ -1,4 +1,4 @@
-# MusicPlayer
+# YouTube Clone
 
 MusicPlayer is an open source music player for Mac and Windows.
 
