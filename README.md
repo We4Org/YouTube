@@ -1,4 +1,9 @@
-# AngularTest
+# MusicPlayer
+
+MusicPlayer is an open source music player for Mac and Windows.
+
+![YouTube FrontPage](https://github.com/raubinsharya/youtube_clone/blob/master/screenshots/2020-03-05.png)
+![Youtube Player](https://github.com/raubinsharya/youtube_clone/blob/master/screenshots/2020-03-05%20(1).png)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.23.
 
