@@ -11,7 +11,6 @@ import { LoginComponent } from "./login/login.component";
 import { HomeComponent } from "./home/home.component";
 import { AuthGuard } from "./auth.guard";
 import { WatchVideoComponent } from "./home/watch-video/watch-video.component";
-import { ExpandableTableComponent } from "./Table/expandable-table/expandable-table.component";
 import { CarouselComponent } from "./Components/carousel/carousel.component";
 
 const routes: Routes = [
@@ -41,10 +40,6 @@ const routes: Routes = [
   {
     path: "admin",
     component: LoginChildComponent
-  },
-  {
-    path: "table",
-    component: ExpandableTableComponent
   },
   {
     path: "carousel",

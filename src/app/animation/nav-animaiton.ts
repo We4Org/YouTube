@@ -19,7 +19,7 @@ export const onSideNavChange = trigger("onSideNavChange", [
       width: "230px"
     })
   ),
-  transition("true <=> false", animate("300ms"))
+  transition("true <=> false", animate("150ms"))
 ]);
 
 export const onMainContentChange = trigger("onMainContentChange", [
@@ -35,5 +35,5 @@ export const onMainContentChange = trigger("onMainContentChange", [
       "margin-left": "230px"
     })
   ),
-  transition("true <=> false", animate("300ms"))
+  transition("true <=> false", animate("150ms"))
 ]);

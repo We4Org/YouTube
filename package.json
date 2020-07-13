@@ -27,10 +27,10 @@
     "hammerjs": "^2.0.8",
     "lodash": "^4.17.15",
     "ng-simple-slideshow": "^1.2.9",
-    "ngx-owl-carousel-o": "^2.0.3",
+    "ngx-owl-carousel-o": "^2.1.1",
     "rxjs": "~6.4.0",
     "tslib": "^1.10.0",
-    "videogular2": "^7.0.1",
+    "videogular2": "^7.0.2",
     "zone.js": "~0.9.1"
   },
   "devDependencies": {

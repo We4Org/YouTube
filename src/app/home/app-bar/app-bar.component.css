@@ -75,3 +75,7 @@ span::selection {
   width: 5000px;
   z-index: 50;
 }
+
+::ng-deep.mat-menu-panel {
+  max-width: unset !important;
+}

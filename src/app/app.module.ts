@@ -20,17 +20,17 @@ import { MaterialModule } from "./material/material.module";
 import { ApiService } from "./services/api.service";
 import { AppComponent } from "./app.component";
 import { AuthGuard } from "./auth.guard";
-import { ExpandableTableComponent } from "./Table/expandable-table/expandable-table.component";
 import { CarouselComponent } from "./Components/carousel/carousel.component";
 import { MatCarouselModule } from "@ngmodule/material-carousel";
+import { NotificationComponent } from './components/home/app-bar/notification/notification.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RoutingComponents,
     WatchVideoComponent,
-    ExpandableTableComponent,
-    CarouselComponent
+    CarouselComponent,
+    NotificationComponent
   ],
   imports: [
     BrowserAnimationsModule,
