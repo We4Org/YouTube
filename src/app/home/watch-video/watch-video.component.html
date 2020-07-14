@@ -1,6 +1,6 @@
-<div class="container-fluid">
+<div class="containers">
   <div class="row mt-4">
-    <div class="col-lg-8 col-md-7 col-sm-12">
+    <div class="col-lg-8 col-md-6 col-sm-12">
       <div class="video">
         <vg-player (onPlayerReady)="onPlayerReady($event)">
           <vg-overlay-play></vg-overlay-play>
@@ -13,7 +13,6 @@
             <vg-scrub-bar-current-time
               [vgSlider]="true"
               class="progress-bar"
-              
             ></vg-scrub-bar-current-time>
             <vg-scrub-bar-buffering-time
               class="buffer-bar"
@@ -23,7 +22,12 @@
           <vg-controls
             [vgAutohide]="false"
             [vgAutohideTime]="1"
-            style="background-color: transparent; font-size: 13px; font-family: roboto; font-weight: 400;"
+            style="
+              background-color: transparent;
+              font-size: 13px;
+              font-family: roboto;
+              font-weight: 400;
+            "
           >
             <vg-play-pause></vg-play-pause>
             <vg-mute class="volume"></vg-mute>
@@ -43,7 +47,6 @@
             <vg-playback-button></vg-playback-button>
             <vg-track-selector></vg-track-selector>
             <!-- <vg-quality-selector> </vg-quality-selector> -->
-
             <vg-fullscreen></vg-fullscreen>
           </vg-controls>
 
@@ -84,101 +87,106 @@
           </video>
         </vg-player>
       </div>
+      <div class="bottom">
+        <p class="tag">#Programming #Language</p>
+        <p class="title">
+          How to Build a NETFLIX Clone with REACT JS for Beginners (in 3 Hours!)
+        </p>
+        <div class="d-flex">
+          <p class="views">1,269,870 views• 13 Dec 2019</p>
+          <div style="flex-grow: 1;"></div>
+          <div class="like-dislike">
+            <button mat-icon-button>
+              <mat-icon>thumb_up</mat-icon>
+            </button>
+            <span>156K</span>
+            <button mat-icon-button>
+              <mat-icon>thumb_down</mat-icon>
+            </button>
+            <span>56K</span>
+          </div>
+          <button mat-icon-button>
+            <mat-icon>share</mat-icon>
+          </button>
+          <span class="share">SHARE</span>
+          <button mat-icon-button>
+            <mat-icon>playlist_add</mat-icon>
+          </button>
+          <span class="share">SAVE</span>
+        </div>
+        <mat-divider></mat-divider>
+        <div class="mt-3">
+          <div class="d-flex">
+            <img
+              class="avatar"
+              src="https://i.ytimg.com/vi/Sp3dFF-Bts0/maxresdefault.jpg"
+              alt=""
+            />
+            <div id="channel" style="display: flex; flex-direction: column;">
+              <span>Clever Programmer</span>
+              <p>563K subscribers</p>
+            </div>
+            <div style="flex-grow: 1;"></div>
+            <button class="subscribe" mat-flat-button color="warn">
+              SUBSCRIBE
+            </button>
+          </div>
+          <div class="description">
+            Join the epic masterclass that shows you how to become a 6-figure
+            developer... <br />
+            <a href="#">https://cleverprogrammer.com</a>
+            <p class="description-text">
+              It's that time of the year where I make a video on the top 5 best
+              programming languages to learn in 2020 ❤️. I got some juicy
+              information for you in this one. <br /><br />
+              We talk about programming languages like Java, JavaScript, Python,
+              Swift, and SQL. I give you a rundown of what is the main reason
+              behind using each of the programming languages as well.
+              <br /><br />
+              For example, which one should you use for the frontend or backend
+              or full-stack? Which programming language is the best for database
+              management? Which programming language is the best for data
+              science, machine learning, or general-purpose scripting?
+              <br /><br />
+              This video got you covered. Sit back, grab some popcorn, and enjoy
+              yourself. You're in for an epic ride.
+            </p>
+            <span class="show-less">SHOW LESS</span>
+          </div>
+          <mat-divider class="comment-divider"></mat-divider>
+          <span>2,794 Comments</span>
+          <button mat-button class="sort-btn">
+            <mat-icon>sort</mat-icon>
+            <span> SORT BY</span>
+          </button>
+        </div>
+        <div class="mt-3 d-flex">
+          <img
+            class="avatar-sm"
+            src="https://i.ytimg.com/vi/Sp3dFF-Bts0/maxresdefault.jpg"
+            alt=""
+          />
+          <form class="w-100">
+            <mat-form-field
+              class="w-100 ml-3"
+              style="font-size: 13px; color: black;"
+              floatLabel="never"
+            >
+              <mat-label>Add a public commnet...</mat-label>
+              <input matInput />
+            </mat-form-field>
+            <div class="comment-btn-group" *ngIf="false">
+              <button mat-flat-button class="submit">CANCEL</button>
+              <button mat-flat-button color="primary" class="submit ml-1">
+                COMMENT
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
     </div>
-    <div class="col-lg-4 col-md-5 col-sm-12 side">
-      <div class="d-flex">
-        <p class="mt-1">Up Next</p>
-        <div style="flex-grow: 1;"></div>
-        <p class="mt-1 mr-1">AUTOPLAY</p>
-        <mat-slide-toggle color="primary"> </mat-slide-toggle>
-      </div>
-      <div class="d-flex mt-3">
-        <img
-          src="https://i.ytimg.com/vi/Sp3dFF-Bts0/maxresdefault.jpg"
-          alt=""
-          width="180"
-        />
-        <div class="side-content pl-2">
-          <p>Tailwind CSS Crash Course</p>
-          <p class="channel">Traversy Media</p>
-          <p class="channel">65K views</p>
-        </div>
-      </div>
-      <mat-divider class="mt-3"></mat-divider>
-      <div>
-        <div class="d-flex mt-3">
-          <img
-            src="https://i.ytimg.com/vi/Sp3dFF-Bts0/maxresdefault.jpg"
-            alt=""
-            width="180"
-          />
-          <div class="side-content pl-2">
-            <p>Tailwind CSS Crash Course</p>
-            <p class="channel">Traversy Media</p>
-            <p class="channel">65K views</p>
-          </div>
-        </div>
-        <div class="d-flex mt-3">
-          <img
-            src="https://i.ytimg.com/vi/Sp3dFF-Bts0/maxresdefault.jpg"
-            alt=""
-            width="180"
-          />
-          <div class="side-content pl-2">
-            <p>Tailwind CSS Crash Course</p>
-            <p class="channel">Traversy Media</p>
-            <p class="channel">65K views</p>
-          </div>
-        </div>
-        <div class="d-flex mt-3">
-          <img
-            src="https://i.ytimg.com/vi/Sp3dFF-Bts0/maxresdefault.jpg"
-            alt=""
-            width="180"
-          />
-          <div class="side-content pl-2">
-            <p>Tailwind CSS Crash Course</p>
-            <p class="channel">Traversy Media</p>
-            <p class="channel">65K views</p>
-          </div>
-        </div>
-        <div class="d-flex mt-3">
-          <img
-            src="https://i.ytimg.com/vi/Sp3dFF-Bts0/maxresdefault.jpg"
-            alt=""
-            width="180"
-          />
-          <div class="side-content pl-2">
-            <p>Tailwind CSS Crash Course</p>
-            <p class="channel">Traversy Media</p>
-            <p class="channel">65K views</p>
-          </div>
-        </div>
-        <div class="d-flex mt-3">
-          <img
-            src="https://i.ytimg.com/vi/Sp3dFF-Bts0/maxresdefault.jpg"
-            alt=""
-            width="180"
-          />
-          <div class="side-content pl-2">
-            <p>Tailwind CSS Crash Course</p>
-            <p class="channel">Traversy Media</p>
-            <p class="channel">65K views</p>
-          </div>
-        </div>
-        <div class="d-flex mt-3">
-          <img
-            src="https://i.ytimg.com/vi/Sp3dFF-Bts0/maxresdefault.jpg"
-            alt=""
-            width="180"
-          />
-          <div class="side-content pl-2">
-            <p>Tailwind CSS Crash Course</p>
-            <p class="channel">Traversy Media</p>
-            <p class="channel">65K views</p>
-          </div>
-        </div>
-      </div>
+    <div class="col-lg-4 col-md-6 col-sm-12 side">
+      <app-watch-video-right-side></app-watch-video-right-side>
     </div>
   </div>
 </div>

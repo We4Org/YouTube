@@ -6,23 +6,24 @@ import { FlexLayoutModule } from "@angular/flex-layout";
 import { LayoutModule } from "@angular/cdk/layout";
 import { NgModule } from "@angular/core";
 
-import { VgCoreModule } from "videogular2/compiled/core";
-import { VgControlsModule } from "videogular2/compiled/controls";
 import { VgOverlayPlayModule } from "videogular2/compiled/overlay-play";
 import { VgBufferingModule } from "videogular2/compiled/buffering";
+import { VgControlsModule } from "videogular2/compiled/controls";
+import { VgCoreModule } from "videogular2/compiled/core";
 
+import { WatchVideoRightSideComponent } from "./home/watch-video/watch-video-right-side/watch-video-right-side.component";
+import { NotificationComponent } from "./components/home/app-bar/notification/notification.component";
 import { WatchVideoComponent } from "./home/watch-video/watch-video.component";
 import { TokenIntercepterService } from "./services/token-intercepter.service";
+import { CarouselComponent } from "./Components/carousel/carousel.component";
 import { AppRoutingModule, RoutingComponents } from "./app-routing.module";
 import { ScreenBreakpointService } from "./services/breakpoint.service";
+import { MatCarouselModule } from "@ngmodule/material-carousel";
 import { SideNavService } from "./services/side-nav.service";
 import { MaterialModule } from "./material/material.module";
 import { ApiService } from "./services/api.service";
 import { AppComponent } from "./app.component";
 import { AuthGuard } from "./auth.guard";
-import { CarouselComponent } from "./Components/carousel/carousel.component";
-import { MatCarouselModule } from "@ngmodule/material-carousel";
-import { NotificationComponent } from './components/home/app-bar/notification/notification.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { NotificationComponent } from './components/home/app-bar/notification/no
     RoutingComponents,
     WatchVideoComponent,
     CarouselComponent,
-    NotificationComponent
+    NotificationComponent,
+    WatchVideoRightSideComponent,
   ],
   imports: [
     BrowserAnimationsModule,
@@ -46,7 +48,7 @@ import { NotificationComponent } from './components/home/app-bar/notification/no
     VgControlsModule,
     VgOverlayPlayModule,
     VgBufferingModule,
-    MatCarouselModule.forRoot()
+    MatCarouselModule.forRoot(),
   ],
   bootstrap: [AppComponent],
   providers: [
@@ -58,8 +60,8 @@ import { NotificationComponent } from './components/home/app-bar/notification/no
     {
       useClass: TokenIntercepterService,
       provide: HTTP_INTERCEPTORS,
-      multi: true
-    }
-  ]
+      multi: true,
+    },
+  ],
 })
 export class AppModule {}

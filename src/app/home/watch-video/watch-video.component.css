@@ -1,3 +1,7 @@
+.containers {
+  width: 90% !important;
+  margin: auto;
+}
 .video {
   max-width: 100%;
   max-height: 100%;
@@ -9,6 +13,7 @@
 .side {
   font-weight: 500;
   font-size: 14px;
+  padding-right: 20px;
 }
 
 p {
@@ -36,4 +41,138 @@ p {
   height: 3px;
 }
 
+.tag {
+  margin-top: 12px;
+  color: #3ea6ff;
+  font-weight: 400;
+  font-size: 12px;
+}
 
+.title {
+  font-size: 18px;
+  font-weight: 500;
+  color: black;
+}
+.views {
+  font-size: 14px;
+  font-weight: 400;
+  color: black;
+  line-height: 21px;
+  margin-top: 10px;
+}
+
+mat-divider {
+  margin-top: 0px;
+}
+
+.like-dislike {
+  border-bottom: 3px solid black;
+}
+
+span {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.share {
+  margin-top: 12px;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.avatar {
+  height: 51px;
+  width: 50px;
+  margin-left: 2px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.avatar-sm {
+  height: 45px;
+  width: 44px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+#channel {
+  margin-left: 10px;
+  justify-content: center;
+}
+
+#channel span {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16px;
+}
+#channel p {
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 18px;
+}
+
+.subscribe {
+  height: fit-content !important;
+}
+
+.description {
+  margin-top: 20px;
+  margin-left: 55px;
+  margin-right: 30px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.description-text {
+  text-align: justify;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  color: #030300;
+  font-style: normal;
+  margin-top: 10px;
+}
+
+.show-less {
+  cursor: pointer;
+  margin-top: 20px;
+  color: #030300;
+  font-weight: 500;
+  font-size: 13px;
+}
+
+.comment-divider {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.sort-btn {
+  margin-left: 10px !important;
+  padding: 4px 8px !important;
+}
+.example-full-width {
+  width: 100%;
+  margin-left: 10px;
+  font-size: 14px;
+}
+
+.comment-btn-group {
+  margin-top: -10px;
+  float: right;
+}
+
+::ng-deep.submit {
+  width: fit-content !important;
+  height: fit-content !important;
+  border-radius: 1px !important;
+}
+
+::ng-deep.mat-button {
+  min-width: unset !important;
+  line-height: unset !important;
+  height: unset !important;
+  padding: 0px !important;
+  padding: 0px !important;
+}
