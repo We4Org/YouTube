@@ -13,12 +13,13 @@ import {
   MatButtonModule,
   MatBadgeModule,
   MatInputModule,
+  MatChipsModule,
   MatTableModule,
   MatIconModule,
   MatListModule,
   MatMenuModule,
   MatTabsModule,
-  MatCardModule
+  MatCardModule,
 } from "@angular/material";
 import { ScrollingModule } from "@angular/cdk/scrolling";
 
@@ -38,6 +39,7 @@ const MaterialComponents = [
   MatBadgeModule,
   MatInputModule,
   MatTableModule,
+  MatChipsModule,
   MatIconModule,
   MatMenuModule,
   MatListModule,
@@ -47,6 +49,6 @@ const MaterialComponents = [
 
 @NgModule({
   imports: [MaterialComponents],
-  exports: [MaterialComponents]
+  exports: [MaterialComponents],
 })
 export class MaterialModule {}

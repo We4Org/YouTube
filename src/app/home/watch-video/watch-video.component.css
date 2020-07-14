@@ -75,7 +75,7 @@ span {
 }
 
 .share {
-  margin-top: 12px;
+  margin-top: 14px;
   font-weight: 600;
   font-size: 12px;
 }
@@ -113,6 +113,11 @@ span {
 
 .subscribe {
   height: fit-content !important;
+  border-radius: 2px !important;
+  line-height: 20px !important;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 10px 14px !important;
 }
 
 .description {
@@ -151,6 +156,8 @@ a {
 .sort-btn {
   margin-left: 10px !important;
   padding: 4px 8px !important;
+  height: fit-content !important;
+  line-height: unset !important;
 }
 .example-full-width {
   width: 100%;
@@ -161,18 +168,103 @@ a {
 .comment-btn-group {
   margin-top: -10px;
   float: right;
+  padding: 0px !important;
 }
 
-::ng-deep.submit {
+.submit {
+  border-radius: 2px;
   width: fit-content !important;
   height: fit-content !important;
+  line-height: unset !important;
   border-radius: 1px !important;
+  padding: 10px 14px !important;
 }
 
-::ng-deep.mat-button {
-  min-width: unset !important;
+.pin {
+  font-size: 13px !important;
+  height: fit-content !important;
+  font-weight: 400;
+  line-height: 18px;
+  color: #606060;
+}
+
+.pin mat-icon {
+  font-size: 13px !important;
+  width: fit-content !important;
+  font-weight: 400;
+  color: #606060;
+  vertical-align: middle;
+  position: relative;
+}
+
+.chip span {
+  background-color: grey;
+  color: white;
+  padding: 2px 4px;
+  border-radius: 10px;
+  margin-left: 18px;
+  font-weight: 400;
+}
+
+.chip span mat-icon {
+  height: fit-content !important;
+  width: fit-content !important;
+  font-size: 10px;
+  color: black;
+  background-color: white;
+  border-radius: 50%;
+  margin-right: 2px;
+  padding: 1px;
+  font-weight: 600;
+}
+
+.chip p {
+  font-size: 13px;
+  font-weight: 400;
+  color: #030303;
+  margin-left: 5px;
+  margin-top: 2px;
+}
+
+.pin-comment {
+  margin-top: 5px;
+  margin-left: 17px;
+  max-width: 500px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.comment-like > button {
+  width: fit-content !important;
+  height: fit-content !important;
   line-height: unset !important;
-  height: unset !important;
+  margin-left: 12px;
   padding: 0px !important;
+}
+
+.comment-like button mat-icon {
+  font-size: 16px;
+}
+
+.comment-like p {
+  font-size: 13px;
+  margin-top: 3px;
+}
+
+.comment-like span {
+  font-size: 13px;
+  margin-left: 10px;
+  margin-top: 3px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.view-replies-btn {
+  width: fit-content !important;
+  height: fit-content !important;
+  line-height: unset !important;
+  margin-left: 9px;
   padding: 0px !important;
+  padding-right: 5px !important;
+  color: blue;
+  margin-top: 5px;
 }

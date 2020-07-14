@@ -175,13 +175,55 @@
               <mat-label>Add a public commnet...</mat-label>
               <input matInput />
             </mat-form-field>
-            <div class="comment-btn-group" *ngIf="false">
+            <div class="comment-btn-group" *ngIf="true">
               <button mat-flat-button class="submit">CANCEL</button>
               <button mat-flat-button color="primary" class="submit ml-1">
                 COMMENT
               </button>
             </div>
           </form>
+        </div>
+        <div class="mt-4 d-flex">
+          <img
+            class="avatar-sm"
+            src="https://yt3.ggpht.com/a/AATXAJyHpxFEtiM21j9JcrwZBKRN5hQtjG7XW2G0ExTsyw=s48-c-k-c0xffffffff-no-rj-mo"
+            alt=""
+          />
+          <div class="d-flex flex-column">
+            <button mat-icon-button disableRipple="true" class="pin ml-3">
+              <mat-icon>push_pin</mat-icon>
+              Pinned By Flying Beast
+            </button>
+            <div class="d-flex chip">
+              <span>
+                Flying Beast
+                <mat-icon>done</mat-icon>
+              </span>
+              <p>10 hours ago</p>
+            </div>
+            <p class="pin-comment">
+              do vote for your fav creator here..<a href=""
+                >http://www.exhibit.tech/influencex20
+              </a>
+              bhai is nominated in the Health and fitness category. you need to
+              create an account, can only vote once a day.
+            </p>
+            <div class="d-flex mt-1 comment-like">
+              <button mat-icon-button>
+                <mat-icon>thumb_up</mat-icon>
+              </button>
+              <p>730</p>
+              <button mat-icon-button>
+                <mat-icon>thumb_down</mat-icon>
+              </button>
+              <p>50</p>
+              <span>REPLY</span>
+            </div>
+            <button mat-button class="view-replies-btn" disableRipple="true">
+              <mat-icon>arrow_drop_down</mat-icon>
+              View 213 replies
+            </button>
+          </div>
         </div>
       </div>
     </div>
