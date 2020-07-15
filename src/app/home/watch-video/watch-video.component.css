@@ -268,3 +268,12 @@ a {
   color: blue;
   margin-top: 5px;
 }
+
+strong {
+  font-weight: 500;
+  font-size: 13px;
+}
+.name {
+  font-size: 13px;
+  margin-left: 18px;
+}

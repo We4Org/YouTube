@@ -24,6 +24,7 @@ import { MaterialModule } from "./material/material.module";
 import { ApiService } from "./services/api.service";
 import { AppComponent } from "./app.component";
 import { AuthGuard } from "./auth.guard";
+import { ChannelDescriptionComponent } from './home/channel-description/channel-description.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { AuthGuard } from "./auth.guard";
     CarouselComponent,
     NotificationComponent,
     WatchVideoRightSideComponent,
+    ChannelDescriptionComponent,
   ],
   imports: [
     BrowserAnimationsModule,

@@ -12,6 +12,7 @@ import { HomeComponent } from "./home/home.component";
 import { AuthGuard } from "./auth.guard";
 import { WatchVideoComponent } from "./home/watch-video/watch-video.component";
 import { CarouselComponent } from "./Components/carousel/carousel.component";
+import { ChannelDescriptionComponent } from "./home/channel-description/channel-description.component";
 
 const routes: Routes = [
   {
@@ -21,35 +22,39 @@ const routes: Routes = [
     children: [
       {
         path: "",
-        component: MainComponent
+        component: MainComponent,
       },
       {
         path: "trending",
-        component: TrendingComponent
+        component: TrendingComponent,
       },
       {
         path: "watch",
-        component: WatchVideoComponent
-      }
-    ]
+        component: WatchVideoComponent,
+      },
+      {
+        path: "channel/:id",
+        component: ChannelDescriptionComponent,
+      },
+    ],
   },
   {
     path: "login",
-    component: LoginComponent
+    component: LoginComponent,
   },
   {
     path: "admin",
-    component: LoginChildComponent
+    component: LoginChildComponent,
   },
   {
     path: "carousel",
-    component: CarouselComponent
-  }
+    component: CarouselComponent,
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
 export class AppRoutingModule {}
 export const RoutingComponents = [
@@ -61,5 +66,5 @@ export const RoutingComponents = [
   LoginComponent,
   HomeComponent,
   MainComponent,
-  MenuComponent
+  MenuComponent,
 ];
