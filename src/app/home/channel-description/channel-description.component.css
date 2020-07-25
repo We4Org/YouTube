@@ -52,6 +52,11 @@
   padding: 10px 14px !important;
 }
 
+.channel-search-btn {
+  margin-top: 12px;
+  margin-left: 20px;
+}
+
 ::ng-deep .mat-tab-label {
   min-width: 100px !important;
   padding: 0px 24px !important;

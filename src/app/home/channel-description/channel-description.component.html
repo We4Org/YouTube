@@ -16,18 +16,19 @@
     </button>
   </div>
   <div class="tab">
-    <mat-tab-group animationDuration="0ms">
-      <mat-tab label="HOME">HOME</mat-tab>
+    <mat-tab-group animationDuration="0ms" selectedIndex="3">
+      <mat-tab label="HOME">
+        <app-channel-home></app-channel-home>
+      </mat-tab>
       <mat-tab label="VIDEOS">VIDEOS</mat-tab>
       <mat-tab label="PLAYLISTS">PLAYLISTS</mat-tab>
       <mat-tab label="COMMUNITY">COMMUNITY</mat-tab>
       <mat-tab label="CHANNELS">CHANNELS</mat-tab>
-      <mat-tab label="ABOUT">ABOUT</mat-tab>
-      <mat-tab>
+      <mat-tab label="ABOUT" active="true">ABOUT</mat-tab>
+      <mat-tab id="search-tab">
         <ng-template mat-tab-label>
           <mat-icon class="example-tab-icon">search</mat-icon>
         </ng-template>
-
         Content 3
       </mat-tab>
     </mat-tab-group>

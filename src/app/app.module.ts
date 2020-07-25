@@ -25,6 +25,7 @@ import { ApiService } from "./services/api.service";
 import { AppComponent } from "./app.component";
 import { AuthGuard } from "./auth.guard";
 import { ChannelDescriptionComponent } from './home/channel-description/channel-description.component';
+import { HomeComponent } from './home/channel-description/home/home.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { ChannelDescriptionComponent } from './home/channel-description/channel-
     NotificationComponent,
     WatchVideoRightSideComponent,
     ChannelDescriptionComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserAnimationsModule,
