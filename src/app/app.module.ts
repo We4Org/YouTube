@@ -24,19 +24,19 @@ import { MaterialModule } from "./material/material.module";
 import { ApiService } from "./services/api.service";
 import { AppComponent } from "./app.component";
 import { AuthGuard } from "./auth.guard";
-import { ChannelDescriptionComponent } from './home/channel-description/channel-description.component';
-import { HomeComponent } from './home/channel-description/home/home.component';
+import { ChannelDescriptionComponent } from "./home/channel-description/channel-description.component";
+import { HomeComponentChannelDescription } from "./home/channel-description/home/home.component";
 
 @NgModule({
   declarations: [
     AppComponent,
+    CarouselComponent,
     RoutingComponents,
     WatchVideoComponent,
-    CarouselComponent,
     NotificationComponent,
-    WatchVideoRightSideComponent,
     ChannelDescriptionComponent,
-    HomeComponent,
+    WatchVideoRightSideComponent,
+    HomeComponentChannelDescription,
   ],
   imports: [
     BrowserAnimationsModule,

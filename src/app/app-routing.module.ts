@@ -9,6 +9,7 @@ import { MenuComponent } from "./home/main/menu/menu.component";
 import { MainComponent } from "./home/main/main.component";
 import { LoginComponent } from "./login/login.component";
 import { HomeComponent } from "./home/home.component";
+import { HomeComponentChannelDescription } from "./home/channel-description/home/home.component";
 import { AuthGuard } from "./auth.guard";
 import { WatchVideoComponent } from "./home/watch-video/watch-video.component";
 import { CarouselComponent } from "./Components/carousel/carousel.component";
@@ -33,8 +34,30 @@ const routes: Routes = [
         component: WatchVideoComponent,
       },
       {
-        path: "channel/:id",
+        path: "channel/:channel",
         component: ChannelDescriptionComponent,
+        children: [
+          {
+            path: "featured",
+            component: TrendingComponent,
+          },
+          {
+            path: "videos",
+            component: HomeComponentChannelDescription,
+          },
+          {
+            path: "playlists",
+            component: TrendingComponent,
+          },
+          {
+            path: "channel",
+            component: TrendingComponent,
+          },
+          {
+            path: "about",
+            component: TrendingComponent,
+          },
+        ],
       },
     ],
   },
